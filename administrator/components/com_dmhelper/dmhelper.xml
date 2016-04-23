@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 
+	type="component" 
+	version="1.6.0" 
+	method="upgrade">
+	
+	<name>DM Helper</name>
+	<author>DM Digital</author> 
+	<creationDate>July 2013</creationDate> 
+	<copyright>All rights reserved by DM Digital - www.dmdigital.net</copyright> 
+	<license>GNU/LGPL http://www.gnu.org/licenses/lgpl-3.0-standalone.html</license>
+	<authorUrl>www.dmjoomlaextensions.com</authorUrl>
+	<version>1.1.0</version>
+	<description>Code library used by any DM extension, do not remove manually.</description>
+	
+	<scriptfile>script.php</scriptfile>
+
+	<files folder="site"></files>
+	
+	<administration>
+	
+		<files folder="admin">
+	       	<filename>framework.php</filename>
+	       	<folder>core</folder>
+			<folder>helpers</folder>
+			<folder>libs</folder>
+			<folder>js</folder>
+		</files>
+	
+	</administration>
+	
+</extension>

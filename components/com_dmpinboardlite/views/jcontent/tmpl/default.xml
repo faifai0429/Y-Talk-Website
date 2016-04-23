@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+
+	<layout title="COM_DMPINBOARDLITE_VIEWNAME_JCONTENT">
+		<message>
+			<![CDATA[COM_DMPINBOARDLITE_VIEWMESSAGE_JCONTENT]]>
+		</message>
+	</layout>
+	
+	<state>
+		<name>COM_DMPINBOARDLITE_VIEWNAME_JCONTENT</name>
+		<description>COM_DMPINBOARDLITE_VIEWDESCRIPTION_JCONTENT</description>
+	</state>
+		
+	<fields name="params">
+	    <fieldset name="basic">
+	    	
+	    	<field 	name="spacer01" type="spacer" 
+	    			label="&lt;div style=&quot;width:380px;padding:5px;line-height:20px;text-align:center;font-weight:bold;color:#fff;background-color:#FA8072;&quot;&gt;Articles Filtering&lt;/div&gt;" 
+	    	/>
+	    	
+	    	<field 	name="categories" type="sql" multiple="true" default="" size="8"
+	    			query="SELECT id, title FROM #__categories WHERE extension = 'com_content'" key_field="id" value_field="title" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_CATEGORIES_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_CATEGORIES_DESC" 
+	        />
+	        
+	        <field 	name="ordering" type="list" default="date_desc" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_ORDERING_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_ORDERING_DESC" >
+	        	<option value="title_asc">Title Alphabetical</option>
+	        	<option value="title_desc">Title Reverse Alphabetical</option>
+	        	<option value="date_desc">Most recent first</option>
+	        	<option value="date_asc">Oldest first</option>
+	        	<option value="hits_desc">Most Hits</option>
+	        	<option value="hits_asc">Least Hits</option>
+	        	<option value="article_order">Article Manager Order</option>
+	        	<option value="random">Random</option>
+	        </field>
+	        
+	    	<field 	name="spacer03" type="spacer" 
+	    			label="&lt;div style=&quot;width:380px;padding:5px;line-height:20px;text-align:center;font-weight:bold;color:#fff;background-color:#FA8072;&quot;&gt;Style Options&lt;/div&gt;" 
+	    	/>
+	    	
+	    	<field 	name="preset_style" type="list" default="style_default" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_PRESETSTYLE_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_PRESETSTYLE_DESC" >
+	        	<option value="style_default">Default</option>
+	        	<option value="style_fullness">Fullness</option>
+	        	<option value="style_pintlike">Pinterest Classic</option>
+	        	<option value="style_pintnew">Pinterest New</option>
+	        	<option value="style_limitless">Limitless</option>
+			</field>
+				        
+	        <field 	name="show_morebutton" type="list" default="yes" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_SHOWMOREBUTTON_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_SHOWMOREBUTTON_DESC" >
+	        	<option value="yes">Yes</option>
+	        	<option value="no">No</option>
+	        </field>
+	        
+	        <field 	name="spacer04" type="spacer" 
+	    			label="&lt;div style=&quot;width:380px;padding:5px;line-height:20px;text-align:center;font-weight:bold;color:#fff;background-color:#FA8072;&quot;&gt;List Options&lt;/div&gt;" 
+	    	/>
+			
+	        <field 	name="show_image" type="list" default="fromtext" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_SHOWIMAGE_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_SHOWIMAGE_DESC" >
+	        	<option value="fromtext">Use first image from article</option>
+	        	<option value="introimg">Use intro image</option>
+	        	<option value="fullimg">Use full article image</option>
+	        	<option value="no">No</option>
+	        </field>
+	        
+	        <field 	name="show_image" type="list" default="fromtext" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_SHOWIMAGE_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_SHOWIMAGE_DESC" >
+	        	<option value="fromtext">Use first image from article</option>
+	        	<option value="introimg">Use intro image</option>
+	        	<option value="fullimg">Use full article image</option>
+	        	<option value="no">No</option>
+	        </field>
+	        
+	        <field 	name="show_title" type="list" default="yes" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_SHOWTITLE_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_SHOWTITLE_DESC" >
+	        	<option value="yes">Yes</option>
+	        	<option value="no">No</option>
+	        </field>
+	        
+	        <field 	name="show_intro" type="list" default="no" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_SHOWINTRO_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_SHOWINTRO_DESC" >
+	        	<option value="yes">Yes</option>
+	        	<option value="no">No</option>
+	        </field>
+	        
+	        <field 	name="introlength" type="text" default="100" 
+	    			label="COM_DMPINBOARD_VIEWPARAM_INTROLENGTH_LABEL" 
+	    			description="COM_DMPINBOARD_VIEWPARAM_INTROLENGTH_DESC" 
+	    	/>
+	        
+	    	<field 	name="spacer05" type="spacer" 
+	    			label="&lt;div style=&quot;width:380px;padding:5px;line-height:20px;text-align:center;font-weight:bold;color:#fff;background-color:#FA8072;&quot;&gt;Other Options&lt;/div&gt;" 
+	    	/>
+	        
+	        <field 	name="load_jquery" type="list" default="yes" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_LOADJQUERY_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_LOADJQUERY_DESC" >
+	        	<option value="yes">Yes</option>
+	        	<option value="no">No</option>
+			</field>
+			
+			<field 	name="load_jqueryui" type="list" default="yes" 
+	        		label="COM_DMPINBOARD_VIEWPARAM_LOADJQUERYUI_LABEL" 
+	        		description="COM_DMPINBOARD_VIEWPARAM_LOADJQUERYUI_DESC" >
+	        	<option value="yes">Yes</option>
+	        	<option value="no">No</option>
+	        </field>
+	        
+	        <field 	name="spacer06" type="spacer" 
+	    			label="&lt;div style=&quot;width:380px;padding:5px;line-height:20px;text-align:center;font-weight:bold;&quot;&gt;&lt;a href=&quot;http://www.dmjoomlaextensions.com/pro-extensions/joomla-components/dm-pinboard-pro.html&quot; target=&quot;_blank&quot;&gt;Get DM Pinboard for more awesome features, &lt;br/&gt;click here for more info.&lt;/a&gt;&lt;/div&gt;" 
+	    	/>
+			
+		</fieldset>
+	</fields>
+	
+</metadata>
